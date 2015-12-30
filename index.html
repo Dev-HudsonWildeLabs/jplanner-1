@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>jPlanner</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1 minimum-scale=0.5">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/momentjs/2.10.6/moment.min.js"></script>
+  <link rel="stylesheet" href="css/jplanner.css">
+
+  <script src="/js/app.js"></script>
+
+  <link rel="icon" 
+      type="image/png" 
+      href="css/icon.png">
+</head>
+<body>
+  <div id="wrapper">
+    <nav class="navbar navbar-inverse nav-tabs">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!--<img class="jplanner-logo"  src="/css/logo.png" alt="jPlanner - Thinkful React Workshop"/>-->
+        <a id="logo" class="navbar-brand" href="#"> jPlanner</a>  
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li id="timeline_menu" class="active" data-toggle="tab"><a  href="#">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="timeline" class="container">
+    <div class="row">
+      <div id="top_info" class="alert alert-warning fade in" style="display:none"></div>
+    </div>
+    <div class="row">
+      <ul id="days_list" class="list-group"> </ul>
+      <div id='loader' class='alert alert-info'><span class="glyphicon glyphicon-download"></span> 
+            Loading more items...
+      </div>
+    </div>
+  </div>
+  <div id="day" class="container" style="display:none">
+  </div>
+</body>
