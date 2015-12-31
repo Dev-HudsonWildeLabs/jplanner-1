@@ -10,7 +10,12 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script src="https://cdn.jsdelivr.net/momentjs/2.10.6/moment.min.js"></script>
   <link rel="stylesheet" href="css/jplanner.css">
-
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.1/css/bootstrap-datepicker.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.1/js/bootstrap-datepicker.min.js"></script>
+ 
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap.timepicker/0.2.6/css/bootstrap-timepicker.min.css">
+  <script src="https://cdn.jsdelivr.net/bootstrap.timepicker/0.2.6/js/bootstrap-timepicker.min.js"></script>
+  <script src="/js/Colour.js"></script>
   <script src="/js/app.js"></script>
 
   <link rel="icon" 
@@ -42,12 +47,54 @@
       <div id="top_info" class="alert alert-warning fade in" style="display:none"></div>
     </div>
     <div class="row">
-      <ul id="days_list" class="list-group"> </ul>
-      <div id='loader' class='alert alert-info'><span class="glyphicon glyphicon-download"></span> 
-            Loading more items...
+      <div id="days_panel" class="col-xs-4">
+        <div id="days_list"> </div>
+      </div>
+      <div id="day_zoom_panel" class="col-xs-8">
+
       </div>
     </div>
   </div>
+  <!-- Modal -->
+  <div id="event_modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Event Edit</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="control-group">
+              <label for="datepicker1" class="control-label">Date</label>
+              <div class="controls">
+                  <div class="input-group">
+                      <label for="datepicker1" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>
+
+                      </label>
+                      <input id="datepicker1" type="text" class="date-picker form-control" />
+                  </div>
+              </div>
+            <div class="form-group">
+              <label for="timepicker1">Time:</label>
+              <div class="input-group bootstrap-timepicker timepicker">
+                <input id="timepicker1" type="text" class="form-control input-small">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="description">Description:</label>
+              <textarea class="form-control" rows="5" id="description"></textarea>
+            </div>
+            
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button id="submitevent" type="button" class="btn btn-default" data-dismiss="modal">Submit</button><button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div> 
   <div id="day" class="container" style="display:none">
   </div>
 </body>
